@@ -1,0 +1,36 @@
+{
+  "name": "cordova-media-scanner",
+  "version": "1.0.0",
+  "description": "Cordova plugin to tell android to scan media",
+  "license": "MIT",
+  "scripts": {
+    "bump": "node ./scripts/bump_version",
+    "postversion": "npm run bump",
+    "prepublish": "npm test"
+  },
+  "engines": [
+    {
+      "cordova": ">=3.0.0"
+    },
+    {
+      "node": ">=0.12"
+    }
+  ],
+  "cordova": {
+    "id": "cordova-media-scanner",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [],
+  "author": {
+    "name": "Bobby Thompson",
+    "email": "bobby@uhray.com",
+    "url": "https://uhray.com"
+  },
+  "contributors": [],
+  "devDependencies": {
+    "eslint": "3.12.2",
+    "nodemsg": "1.1.0"
+  }
+}

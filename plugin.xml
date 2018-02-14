@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova-base64-to-gallery" version="4.1.3">
+
+  <engines>
+    <engine name="cordova-ios" version=">=3.8.0" />
+  </engines>
+
+  <name>mediaScanner</name>
+
+  <description>Cordova plugin to tell android to scan media</description>
+
+  <license>MIT</license>
+
+  <js-module name="mediaScanner" src="www/mediaScanner.js">
+    <clobbers target="cordova.mediaScanner"/>
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <source-file src="src/android/MediaScanner.java" target-dir="src/it/uhray/mediaScanner"/>
+
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="MediaScanner">
+        <param name="android-package" value="it.uhray.mediaScanner.MediaScanner"/>
+      </feature>
+    </config-file>
+  </platform>
+</plugin>
